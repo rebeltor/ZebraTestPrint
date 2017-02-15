@@ -118,18 +118,7 @@ namespace ZebraTestPrint
             {
                 return;
             }
-
-            //if (this.IsOpen)
-            //{
-            //    try
-            //    {
-            //        com.WriteLine(line);
-            //    }
-            //    catch (IOException)
-            //    {
-            //        this.Close();
-            //    }
-            //}
+            
             this.Print(Encoding.ASCII.GetBytes(line + END_COMMAND));
         }
 

@@ -73,17 +73,11 @@ namespace ZebraTestPrint
 
                     //PrintHelper.SendStringToPrinter(printerName, data);
 
-                    //data = "^XA^FWN^MD30" + System.Environment.NewLine +
-                    //    "^FO0100,0040^A0,N,100,30^FD TEMPORARY ^FS" + System.Environment.NewLine +
-                    //    "^FO0020,0140^A0,N,100,30^FD PARKING PERMIT ^FS" + System.Environment.NewLine +
-                    //    "^XZ";
-
-                    byte[] b = Encoding.ASCII.GetBytes(data);
-                    RawPrinter.Print(b, printerName);
-
                     //PlainTextPrinter p = new PlainTextPrinter();
                     //p.Print(data, printerName);
 
+                    byte[] b = Encoding.ASCII.GetBytes(data);
+                    RawPrinter.Print(b, printerName);
                 }
                 catch (Exception ex)
                 {
@@ -99,7 +93,7 @@ namespace ZebraTestPrint
 
         private string GetTestPrintFormat()
         {
-            string s = @"!15 203 203 1500 1
+            string s = @"! 15 203 203 1500 1
 LABEL
 TONE 0
 CENTER
